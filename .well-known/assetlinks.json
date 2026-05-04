@@ -4,9 +4,7 @@
     "namespace": "android_app",
     "package_name": "com.heathy.heathy_teacher", 
     "sha256_cert_fingerprints": [
-        "BE:70:C9:9F:BF:F7:F1:35:0F:D0:6B:68:A0:CC:3D:B5:97:B4:10:D2:58:3C:4E:3C:D4:40:24:94:9A:04:76:1B",
-        "4E:5B:EB:59:6F:F2:32:4D:BB:54:44:70:92:85:25:6C:2F:68:84:63:2C:C4:A8:6B:97:9E:68:24:F3:50:16:76",
-        "9C:08:0E:E6:45:03:91:9F:B7:77:CC:9F:97:4A:39:8E:5B:E1:2C:9E:C2:01:D8:CD:E3:EE:C0:3F:08:74:21:7B"          
+      "9C:08:0E:E6:45:03:91:9F:B7:77:CC:9F:97:4A:39:8E:5B:E1:2C:9E:C2:01:D8:CD:E3:EE:C0:3F:08:74:21:7B"
     ]
   }
 }]
