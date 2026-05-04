@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [ "2NMM4VZANC.com.heathy.heathyTeacher" ],
+        "components": [
+          {
+            "/": "/applink/*",
+            "comment": "Chỉ mở app khi đường dẫn bắt đầu bằng /applink"
+          }
+        ]
+      }
+    ]
+  }
+}
