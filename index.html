@@ -1,89 +1,36 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heathy Teacher - Ứng dụng học tập</title>
+    <title>Mở App</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #f4f7f6;
-            color: #333;
-            text-align: center;
+            background-color: #ffffff;
         }
-        .container {
-            padding: 20px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            max-width: 400px;
-        }
-        h1 { color: #2c3e50; margin-bottom: 10px; }
-        p { color: #7f8c8d; line-height: 1.6; }
-        .logo {
-            width: 100px;
-            height: 100px;
-            background: #4CAF50; /* Thay bằng màu chủ đạo của app bạn */
-            border-radius: 20px;
-            margin-bottom: 20px;
-            display: inline-block;
-        }
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 30px;
-            background-color: #4CAF50;
+        .open-btn {
+            padding: 20px 40px;
+            font-size: 20px;
+            background-color: #007AFF;
             color: white;
             text-decoration: none;
-            border-radius: 25px;
+            border-radius: 10px;
+            font-family: sans-serif;
             font-weight: bold;
-            transition: background 0.3s;
         }
-        .btn:hover { background-color: #45a049; }
-        .footer { margin-top: 30px; font-size: 0.8em; color: #bdc3c7; }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Nếu bạn có logo, hãy thay thẻ div này bằng thẻ img -->
-        <div class="logo"></div> 
-        
-        <h1>Heathy Teacher</h1>
-        <p>Chào mừng bạn đến với nền tảng theo dõi học tập và luyện tập online dành cho học sinh.</p>
+    <!-- Khi bấm nút này, Android sẽ nhận diện link và tự mở App vì đã verified -->
+    <a href="https://tenshi1123.github.io" class="open-btn">
+        BẤM ĐỂ VÀO APP
+    </a>
 
-        <!-- Link này sẽ kích hoạt App Link nếu đã cài app -->
-        <!-- Nếu chưa cài, nó sẽ mở đúng link này trên trình duyệt hoặc dẫn tới Store -->
-        <a href="https://tenshi1123.github.io/open" class="btn">MỞ ỨNG DỤNG</a>
-
-        <div style="margin-top: 15px;">
-            <a href="https://play.google.com/store/apps/details?id=com.heathy.heathy_teacher" 
-               style="color: #3498db; text-decoration: none; font-size: 0.9em;">
-               Hoặc tải trên Google Play
-            </a>
-        </div>
-    </div>
-
-    <div class="footer">
-        © 2026 Heathy Teacher Team
-    </div>
-
-    <script>
-        // Tự động chuyển hướng sau 2 giây nếu người dùng không bấm
-        // Lưu ý: Chỉ nên dùng nếu bạn muốn trải nghiệm "rảnh tay"
-        /*
-        window.onload = function() {
-            setTimeout(function() {
-                window.location.href = "intent://tenshi1123.github.io#Intent;scheme=https;package=com.heathy.heathy_teacher;end";
-            }, 2000);
-        };
-        */
-    </script>
 </body>
 </html>
