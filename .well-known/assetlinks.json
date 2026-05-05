@@ -2,9 +2,7 @@
   "relation": ["delegate_permission/common.handle_all_urls"],
   "target": {
     "namespace": "android_app",
-    "package_name": "com.heathy.heathy_teacher", 
-    "sha256_cert_fingerprints": [
-      "9C:08:0E:E6:45:03:91:9F:B7:77:CC:9F:97:4A:39:8E:5B:E1:2C:9E:C2:01:D8:CD:E3:EE:C0:3F:08:74:21:7B"
-    ]
+    "package_name": "com.heathy.heathy_teacher",
+    "sha256_cert_fingerprints": ["9C:08:0E:E6:45:03:91:9F:B7:77:CC:9F:97:4A:39:8E:5B:E1:2C:9E:C2:01:D8:CD:E3:EE:C0:3F:08:74:21:7B"]
   }
 }]
