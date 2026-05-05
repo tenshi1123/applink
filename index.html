@@ -11,27 +11,18 @@
             font-size: 20px;
             background-color: #007AFF;
             color: white;
-            border: none;
+            text-decoration: none;
             border-radius: 10px;
             font-weight: bold;
-            cursor: pointer;
         }
     </style>
 </head>
 <body>
 
-    <!-- Dùng Button thay vì thẻ A để kiểm soát tốt hơn -->
-    <button class="open-btn" onclick="openApp()">VÀO APP NGAY</button>
-
-    <script>
-        function openApp() {
-            // Tạo một đường dẫn có thêm tham số thời gian để trình duyệt thấy "lạ" và chịu load
-            var appUrl = "https://tenshi1123.github.io/redirect?t=" + new Date().getTime();
-            
-            // Lệnh này sẽ kích hoạt hệ điều hành quét App Link
-            window.location.href = appUrl;
-        }
-    </script>
+    <!-- Link Intent: Cách mạnh nhất để ép Chrome mở App trên Android -->
+    <a href="intent://tenshi1123.github.io/open#Intent;scheme=https;package=com.heathy.heathy_teacher;end" class="open-btn">
+        VÀO APP NGAY
+    </a>
 
 </body>
 </html>
