@@ -6,20 +6,15 @@
 </head>
 <body>
     <script>
-        // Thay ID app của bạn vào đây
-        var packageID = "com.heathy.heathy_teacher"; 
-        
-        // 1. Cố gắng mở app bằng Intent (Dành cho Android)
-        // Nếu đã cài app, nó sẽ mở app. 
-        // Nếu chưa cài, nó sẽ tự động dùng S.browser_fallback_url để về Store.
-        var intentURL = "intent://open#Intent;scheme=https;package=" + packageID + ";S.browser_fallback_url=https://play.google.com/store/apps/details?id=" + packageID + ";end";
+        var packageID = "com.heathy.heathy_teacher";
 
-        window.location.href = intentURL;
+        // Thử mở app qua App Link
+        window.location.href = "https://tenshi1123.github.io";
 
-        // 2. Dự phòng (Fallback) cho các trình duyệt không hỗ trợ Intent
+    // Nếu không mở được thì fallback Store
         setTimeout(function() {
             window.location.href = "https://play.google.com/store/apps/details?id=" + packageID;
-        }, 2500);
+        }, 2000);
     </script>
     
     <div style="text-align: center; margin-top: 50px; font-family: Arial, sans-serif;">
