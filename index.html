@@ -5,32 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mở App</title>
     <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #ffffff;
-        }
+        body { display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; font-family: sans-serif; }
         .open-btn {
             padding: 20px 40px;
             font-size: 20px;
             background-color: #007AFF;
             color: white;
-            text-decoration: none;
+            border: none;
             border-radius: 10px;
-            font-family: sans-serif;
             font-weight: bold;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
 
-    <!-- Khi bấm nút này, Android sẽ nhận diện link và tự mở App vì đã verified -->
-    <a href="https://tenshi1123.github.io/#open" class="open-btn">
-    BẤM ĐỂ VÀO APP 1
-</a>
+    <!-- Dùng Button thay vì thẻ A để kiểm soát tốt hơn -->
+    <button class="open-btn" onclick="openApp()">VÀO APP NGAY</button>
+
+    <script>
+        function openApp() {
+            // Tạo một đường dẫn có thêm tham số thời gian để trình duyệt thấy "lạ" và chịu load
+            var appUrl = "https://tenshi1123.github.io/redirect?t=" + new Date().getTime();
+            
+            // Lệnh này sẽ kích hoạt hệ điều hành quét App Link
+            window.location.href = appUrl;
+        }
+    </script>
 
 </body>
 </html>
