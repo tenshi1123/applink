@@ -1,25 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Đang chuyển hướng...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mở ứng dụng Heathy Teacher</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 14px 20px;
+            font-size: 16px;
+            color: white;
+            background: #007bff;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+        .btn-store {
+            background: #28a745;
+        }
+    </style>
 </head>
+
 <body>
-    <script>
-        var packageID = "com.heathy.heathy_teacher";
 
-        // Thử mở app qua App Link
-        window.location.href = "https://tenshi1123.github.io/test";
+<h2>Đang mở ứng dụng Heathy Teacher...</h2>
+<p id="desc">Vui lòng chờ trong giây lát</p>
 
-    // Nếu không mở được thì fallback Store
-        setTimeout(function() {
-            window.location.href = "https://play.google.com/store/apps/details?id=" + packageID;
+<a id="openAppBtn" class="btn" href="#">Mở ứng dụng</a>
+<br/>
+<a id="storeBtn" class="btn btn-store" href="#">Tải ứng dụng</a>
+
+<script>
+    var packageID = "com.heathy.heathy_teacher";
+    var appLink = "https://tenshi1123.github.io/test";
+    var storeLink = "https://play.google.com/store/apps/details?id=" + packageID;
+
+    var ua = navigator.userAgent || "";
+
+    // Detect Zalo / Messenger / FB
+    var isZalo = ua.includes("Zalo");
+    var isFB = ua.includes("FBAN") || ua.includes("FBAV");
+    var isMessenger = ua.includes("Messenger");
+
+    var openBtn = document.getElementById("openAppBtn");
+    var storeBtn = document.getElementById("storeBtn");
+    var desc = document.getElementById("desc");
+
+    openBtn.href = appLink;
+    storeBtn.href = storeLink;
+
+    if (isZalo || isFB || isMessenger) {
+        // ❌ Không auto redirect
+        desc.innerHTML = `
+            Trình duyệt trong app không hỗ trợ mở ứng dụng.<br/><br/>
+            👉 Vui lòng bấm "Mở ứng dụng"<br/>
+            hoặc chọn "Mở bằng Chrome"
+        `;
+    } else {
+        // ✅ Browser thật → auto mở app
+        window.location.href = appLink;
+
+        // fallback store
+        setTimeout(function () {
+            window.location.href = storeLink;
         }, 2000);
-    </script>
-    
-    <div style="text-align: center; margin-top: 50px; font-family: Arial, sans-serif;">
-        <h2>Đang mở ứng dụng Heathy Teacher...</h2>
-        <p>Nếu không thấy chuyển hướng, <a href="https://play.google.com/store/apps/details?id=com.heathy.heathy_teacher">bấm vào đây để tải app</a>.</p>
-    </div>
+    }
+</script>
+
 </body>
 </html>
